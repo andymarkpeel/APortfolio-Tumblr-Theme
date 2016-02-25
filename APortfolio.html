@@ -1,108 +1,1485 @@
+<html>
+    
+<!--                                                                                                 
+"APortfolio"
+
+Designed by Andy Peel
+http://theresanapforthat.co.uk
+
+Released March 2016
+                
+-->
+    
+<head>
+
+
+<title>{Title}</title>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+    {block:Description}
+<meta name="description" content="{MetaDescription}" />
+    {/block:Description}
+<meta name="author" content="Andy Peel" />
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+<meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no" />
+    
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+    
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Merriweather:400,300' rel='stylesheet' type='text/css'>
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Options -->
+    
+
+
+        <meta name="if:ShowLogo" content=""/>
+        <meta name="if:ShowTitle" content="1"/>
+        <meta name="if:ShowDescription" content="1"/>
+
+        <meta name="if:ShowProject1" content=""/>
+        <meta name="if:ShowProject2" content=""/>
+        <meta name="if:ShowProject3" content=""/>
+        <meta name="if:ShowProject4" content=""/>
+        <meta name="if:ShowProject5" content=""/>
+        <meta name="if:ShowProject6" content=""/>
+        <meta name="if:ShowProject7" content=""/>
+        <meta name="if:ShowProject8" content=""/>
+        <meta name="if:ShowProject9" content=""/>
+        <meta name="if:ShowProject10" content=""/>
+        <meta name="if:ShowProject11" content=""/>
+        <meta name="if:ShowProject12" content=""/>
+        <meta name="if:ShowProjectsFooter" content=""/>
+        
+        <meta name="image:Logo" content="">
+        <meta name="image:Header Image" content="">
+        
+        <meta name="image:Project 1 Image" content="">
+        <meta name="image:Project 2 Image" content="">
+        <meta name="image:Project 3 Image" content="">
+        <meta name="image:Project 4 Image" content="">
+        <meta name="image:Project 5 Image" content="">
+        <meta name="image:Project 6 Image" content="">
+        <meta name="image:Project 7 Image" content="">
+        <meta name="image:Project 8 Image" content="">
+        <meta name="image:Project 9 Image" content="">
+        <meta name="image:Project 10 Image" content="">
+        <meta name="image:Project 11 Image" content="">
+        <meta name="image:Project 12 Image" content="">
+
+        <meta name="text:Project 1 Link" content="">
+        <meta name="text:Project 2 Link" content="">
+        <meta name="text:Project 3 Link" content="">
+        <meta name="text:Project 4 Link" content="">
+        <meta name="text:Project 5 Link" content="">
+        <meta name="text:Project 6 Link" content="">
+        <meta name="text:Project 7 Link" content="">
+        <meta name="text:Project 8 Link" content="">
+        <meta name="text:Project 9 Link" content="">
+        <meta name="text:Project 10 Link" content="">
+        <meta name="text:Project 11 Link" content="">
+        <meta name="text:Project 12 Link" content="">
+
+        <meta name="text:Project 1 Name" content="">
+        <meta name="text:Project 2 Name" content="">
+        <meta name="text:Project 3 Name" content="">
+        <meta name="text:Project 4 Name" content="">
+        <meta name="text:Project 5 Name" content="">
+        <meta name="text:Project 6 Name" content="">
+        <meta name="text:Project 7 Name" content="">
+        <meta name="text:Project 8 Name" content="">
+        <meta name="text:Project 9 Name" content="">
+        <meta name="text:Project 10 Name" content="">
+        <meta name="text:Project 11 Name" content="">
+        <meta name="text:Project 12 Name" content="">
+    
+        <meta name="color:Header Colour" content="#778899"/>
+        <meta name="color:Title" content="#ffffff"/>
+        <meta name="color:Perma Headline" content="#696969"/>
+        <meta name="color:Perma Title" content="#ffffff"/>
+        <meta name="color:Copy Text" content="#696969"/>
+        <meta name="color:Post Background" content="#F8F8FF"/>
+        <meta name="color:Project Title" content="#ffffff"/>
+    
+        <meta name="color:Project 1 Colour" content="#D3D3D3"/>
+        <meta name="color:Project 2 Colour" content="#C0C0C0"/>
+        <meta name="color:Project 3 Colour" content="#696969"/>
+        <meta name="color:Project 4 Colour" content="#A9A9A9"/>
+        <meta name="color:Project 5 Colour" content="#708090"/>
+        <meta name="color:Project 6 Colour" content="#808080"/>
+        <meta name="color:Project 7 Colour" content="#D3D3D3"/>
+        <meta name="color:Project 8 Colour" content="#808080"/>
+        <meta name="color:Project 9 Colour" content="#696969"/>
+        <meta name="color:Project 10 Colour" content="#778899"/>
+        <meta name="color:Project 11 Colour" content="#D3D3D3"/>
+        <meta name="color:Project 12 Colour" content="#808080"/>
+        
+        <meta name="font:Title" content="Merriweather" />
+        <meta name="font:Description" content="Open Sans" />
+        <meta name="font:Copy" content="Open Sans" />
+        <meta name="font:Links" content="Merriweather" />
+        <meta name="font:ProjectTitle" content="Merriweather" />
+
+
+        <meta name="text:Google analytics ID" content="">
+
+        <meta name="text:AboutLink" content="">
+        <meta name="text:AboutName" content="">
+
+    
+
+<style>
+
+    
+    html, body {
+    margin:0;
+    padding:0;
+    background-color: {color:Post Background};        
+    }
+     
+    /* Index Page ********************************/
+   
     .header {
-                background-image: url({image:HeaderImage});
-                min-height:100%;
-                min-width: 100%;
+                background-image: url('{image:Header Image}');
+                height: 100vh;
+                width: 100%;
                 background-size: cover;
-            }
+                background-position: center center;
+                background-color: {color:Header Colour};
+                margin: 0;
+
+       }
     
     
+    .title {  
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            height: 600px;
+            padding: 0 5% 0 5%;
+            margin: 0;
+    }
+    
+    .logo {
+            text-align: left;
+            margin: 0;
+            width: 150px;
+            height: 150px;
+            float: left;
+            padding-bottom: 20px;
+    }
+    .permalogo {
+            text-align: left;
+            margin: 0;
+            width: 50px;
+            height: 50px;
+            padding-right: 20px;
+            float: left;
+    }
+    
+    h1 {    font-size: 80px;
+            line-height: 85px;
+            font-family: {font:Title}; "Open Sans", sans serif;
+            font-weight: 400;
+            text-align: left;
+            text-decoration: none;
+            color: {color:Title};
+            margin: 0;
+            float: left;
+        }
+    
+    h1 a {  font-size: 80px;
+            line-height: 85px;
+            font-family: {font:Title}; "Open Sans", sans serif;
+            font-weight: 400;
+            text-align: left;
+            text-decoration: none;
+            color: {color:Title};
+            margin: 0;
+            float: left;
+    }
+    
+@media (max-width: 1000px) {
+    h1 {    font-size: 60px;
+            line-height: 70px;
+            font-family: {font:Title}; "Open Sans", sans serif;
+            font-weight: 400;
+            text-align: left;
+            padding: 0;
+            text-decoration: none;
+            color: {color:Title};
+            float: left;
+            margin: 0;}
+    }  
 
+@media (max-width: 480px) {
+    h1 {    font-size: 40px;
+            line-height: 50px;
+            font-family: {font:Title}; "Open Sans", sans serif;
+            font-weight: 400;
+            text-align: left;
+            padding: 0;
+            text-decoration: none;
+            color: {color:Title};
+            float: left;
+            margin: 0;}  
+    }
+    
+    h2{    
+            font-size: 40px;
+            line-height: 50px;
+            font-family: {font:Description}; "Open Sans", sans serif;
+            font-weight: 300;
+            text-align: left;
+            padding: 0;
+            text-decoration: none;
+            color: {color:Title};            
+            margin: 0;
+    }
+    
+@media (max-width: 1000px) {
+        h2{    
+            font-size: 30px;
+            line-height: 40px;
+            font-family: {font:Description}; "Open Sans", sans serif;
+            font-weight: 300;
+            text-align: left;
+            padding: 0;
+            text-decoration: none;
+            color: {color:Title};
+            margin: 0;}
+    }
+    
+  @media (max-width: 480px) {
+      h2{    
+            font-size: 20px;
+            line-height: 25px;
+            font-family: {font:Description}; "Open Sans", sans serif;
+            font-weight: 300;
+            text-align: left;
+            padding: 0;
+            text-decoration: none;
+            color: {color:Title};
+            margin: 0;}
+    }
+    
+a:link {
+    text-decoration: none;
+}
 
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+    
+    .links{
+        bottom: 25px;
+        color: {color:Title};
+        position: absolute;
+        width: 100%;
+        text-align:center;
+        margin: 0 auto;
+    }
+    
+    .permalinks{
+        padding-bottom: 25px;
+        color: {color:Title};
+        width: 100%;
+        text-align:center;
+        margin: 0 auto;
+    }
+    
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style-type:none;
+        display: inline-block;
+
+    }   
+    
+    li {            
+        color: {color:Title};
+        list-style-type: none;
+        font-size: 25px;
+        line-height: 25px;
+        font-family: {font:Links}; "Open Sans", sans serif;
+        font-weight: 300;
+        display: inline-block;
+    }
+@media (max-width: 1000px) {
+    li {            
+        color: {color:Title};
+        list-style-type: none;
+        font-size: 20px;
+        line-height: 20px;
+        font-family: {font:Links}; "Open Sans", sans serif;
+        font-weight: 300;
+        display: inline-block;}
+    }
+
+@media (max-width: 480px) {
+    li {            
+        color: {color:Title};
+        list-style-type: none;
+        padding: 20px 5px 5px 5px;
+        font-size: 20px;
+        line-height: 20px;
+        font-family: {font:Links}; "Open Sans", sans serif;
+        font-weight: 300;
+        display: inline-block;}
+    }
+    
+    li a {            
+        color: {color:Title};
+        list-style-type: none;
+        border-style: none none solid none;
+        border-width: 2px;
+        padding: 5px;
+        margin: 0 10px;
+        font-size: 25px;
+        line-height: 25px;
+        font-family: {font:Links}; "Open Sans", sans serif;
+        font-weight: 300;
+        text-align: center;
+    }
+    
+@media (max-width: 1000px) {
+    li a {            
+        color: {color:Title};
+        list-style-type: none;
+        border-style: none none solid none;
+        border-width: 2px;
+        padding: 20px 5px 5px 5px;
+        margin: 0 10px;
+        font-size: 20px;
+        line-height: 20px;
+        font-family: {font:Links}; "Open Sans", sans serif;
+        font-weight: 300;
+        text-align: center;}
+    }
+
+@media (max-width: 480px) {
+    li a {            
+        color: {color:Title};
+        list-style-type: none;
+        border-style: none none solid none;
+        border-width: 1px;
+        padding: 20px 5px 5px 5px;
+        margin: 0 10px;
+        font-size: 20px;
+        line-height: 20px;
+        font-family: {font:Links}; "Open Sans", sans serif;
+        font-weight: 300;
+        text-align: center;}
+    }
+    
+    li.perma {            
+        color: {color:Copy Text};
+        list-style-type: none;
+        font-size: 25px;
+        line-height: 25px;
+        font-family: {font:Links}; "Open Sans", sans serif;
+        font-weight: 300;
+        display: inline-block;
+    }
+    
+@media (max-width: 1000px) {
+    li.perma {            
+        color: {color:Copy Text};
+        list-style-type: none;
+        font-size: 20px;
+        line-height: 20px;
+        font-family: {font:Links}; "Open Sans", sans serif;
+        font-weight: 300;
+        display: inline-block;}
+    }
+    
+@media (max-width: 480px) {
+    li.perma {            
+        color: {color:Copy Text};
+        list-style-type: none;
+        padding-top: 20px;
+        font-size: 20px;
+        line-height: 20px;
+        font-family: {font:Links}; "Open Sans", sans serif;
+        font-weight: 300;
+        display: inline-block;}
+    }
+
+    li.perma a {            
+        color: {color:Copy Text};
+        list-style-type: none;
+        border-style: none none solid none;
+        border-width: 2px;
+        padding: 5px;
+        margin: 0 10px;
+        font-size: 25px;
+        line-height: 25px;
+        font-family: {font:Links}; "Open Sans", sans serif;
+        font-weight: 300;
+        text-align: center;
+    }
+ 
+@media (max-width: 1000px) {
+    li.perma a {            
+        color: {color:Copy Text};
+        list-style-type: none;
+        border-style: none none solid none;
+        border-width: 2px;
+        padding: 5px;
+        margin: 0 10px;
+        font-size: 20px;
+        line-height: 20px;
+        font-family: {font:Links}; "Open Sans", sans serif;
+        font-weight: 300;
+        text-align: center;}
+    }
+    
+@media (max-width: 480px) {
+    li.perma a {            
+        color: {color:Copy Text};
+        list-style-type: none;
+        padding-top: 20px;
+        border-style: none none solid none;
+        border-width: 2px;
+        padding: 5px;
+        margin: 0 10px;
+        font-size: 20px;
+        line-height: 20px;
+        font-family: {font:Links}; "Open Sans", sans serif;
+        font-weight: 300;
+        text-align: center;}
+    }
+    
+    
+    /* Projects Index Page ********************************/
+    
+    .pcopy{      
+        color: {color:Project Title};                                           position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 30px;
+        line-height: 30px;
+        font-family: {font:ProjectTitle}; "Open Sans", sans serif;
+        font-weight: 400;
+    }
+    .permapcopy{      
+        color: {color:Project Title};                                           position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 20px;
+        line-height: 20px;
+        font-family: {font:ProjectTitle}; "Open Sans", sans serif;
+        font-weight: 400;
+    }
     
     .project1{
-                background-image: url({image:Project1});
+                background-color: {color:Project 1 Colour};
+                background-image: url('{image:Project 1 Image}');
                 background-size: cover;
-          background-color: aquamarine;
-              width: 33%;
-                float: left;
-                text-align: center;
-                height: 200px;
-            }
-    .project2{
-                background-image: url({image:Project2});
-                background-size: cover;
-        background-color: aquamarine;
                 width: 33%;
                 float: left;
                 text-align: center;
-                height: 200px;
+                height: 300px;
+                color: {color:Project Title};
+                position: relative;
 
             }
+    
+@media (max-width: 1000px) {
+    .project1 {
+        width: 50%;
+        float: left;
+        text-align: center;
+        height: 300px;}
+    }
+    
+@media (max-width: 480px) { 
+    .project1 {
+        width: 100%;
+        float: left;
+        text-align: center;
+        height: 300px;}
+    }
+    
+    .project2{
+                background-color: {color:Project 2 Colour};
+                background-image: url('{image:Project 2 Image}');
+                background-size: cover;
+                width: 34%;
+                float: left;
+                text-align: center;
+                height: 300px;
+                color: {color:Project Title};
+                position: relative;
+            }
+
+@media (max-width: 1000px) {
+    .project2 {
+        width: 50%;
+        float: left;
+        text-align: center;
+        height: 300px;}
+    }
+    
+@media (max-width: 480px) {
+    .project2 {
+        width: 100%;
+        float: left;
+        text-align: center;
+        height: 300px;}
+    }
+    
     .project3{
-                background-image: url({image:Project3});
-        background-color: aquamarine;
+                background-color: {color:Project 3 Colour};
+                background-image: url('{image:Project 3 Image}');
                 background-size: cover;
                 width: 33%;
                 float: left;
                 text-align: center;
-                height: 200px;
+                height: 300px;
+                color: {color:Project Title};
+                position: relative;
          }
+    
+@media (max-width: 1000px) {
+    .project3 {
+        width: 50%;
+        float: left;
+        text-align: center;
+        height: 300px;}
+    }
+    
+@media (max-width: 480px) { 
+    .project3 {
+        width: 100%;
+        float: left;
+        text-align: center;
+        height: 300px;}
+    }
+    
     .project4{
-                background-image: url({image:Project4});
+                background-color: {color:Project 4 Colour};
+                background-image: url('{image:Project 4 Image}');
                 background-size: cover;
                 width: 33%;
                 float: left;
                 text-align: center;
-                height: 200px;
+                height: 300px;
+                color: {color:Project Title};
+                position: relative;
             }
+
+    @media (max-width: 1000px) {
+    .project4 {
+        width: 50%;
+        float: left;
+        text-align: center;
+        height: 300px;}
+    }
+    
+@media (max-width: 480px) { 
+    .project4 {
+        width: 100%;
+        float: left;
+        text-align: center;
+        height: 300px;}
+    }
+    
     .project5{
-                background-image: url({image:Project5});
+                background-color: {color:Project 5 Colour};
+                background-image: url('{image:Project 5 Image}');
                 background-size: cover;
-                width: 33%;
+                width: 34%;
                 float: left;
                 text-align: center;
-                height: 200px;
+                height: 300px;
+                color: {color:Project Title};
+                position: relative;
             }
+   
+@media (max-width: 1000px) {
+    .project5 {
+        width: 50%;
+        float: left;
+        text-align: center;
+        height: 300px;}
+    }
+    
+@media (max-width: 480px) {
+    .project5 {
+        width: 100%;
+        float: left;
+        text-align: center;
+        height: 300px;}
+    }
+    
     .project6{
-                background-image: url({image:Project6});
+                background-color: {color:Project 6 Colour};
+                background-image: url('{image:Project 6 Image}');
                 background-size: cover;
                 width: 33%;
                 float: left;
                 text-align: center;
-                height: 200px;
+                height: 300px;
+                color: {color:Project Title};
+                position: relative;
             }
+
+@media (max-width: 1000px) {
+    .project6 {
+        width: 50%;
+        float: left;
+        text-align: center;
+        height: 300px;}
+    }
+    
+@media (max-width: 480px) {
+    .project6 {
+        width: 100%;
+        float: left;
+        text-align: center;
+        height: 300px;}
+    }
+    
     .project7{
-                background-image: url({image:Project7});
+                background-color: {color:Project 7 Colour};
+                background-image: url('{image:Project 7 Image}');
                 background-size: cover;
                 width: 33%;
                 float: left;
                 text-align: center;
-                height: 200px;
+                height: 300px;
+                color: {color:Project Title};
+                position: relative;
             }
+    
+@media (max-width: 1000px) {
+    .project7 {
+        width: 50%;
+        float: left;
+        text-align: center;
+        height: 300px;}
+    }
+    
+@media (max-width: 480px) {
+    .project7 {
+        width: 100%;
+        float: left;
+        text-align: center;
+        height: 300px;}
+    }  
+    
     .project8{
-                background-image: url({image:Project8});
+                background-color: {color:Project 8 Colour};
+                background-image: url('{image:Project 8 Image}');
                 background-size: cover;
-                width: 33%;
+                width: 34%;
                 float: left;
                 text-align: center;
-                height: 200px;
+                height: 300px;
+                color: {color:Project Title};
+                position: relative;
             }
+    
+@media (max-width: 1000px) {
+    .project8 {
+        width: 50%;
+        float: left;
+        text-align: center;
+        height: 300px;}
+    }
+    
+@media (max-width: 480px) {
+    .project8 {
+        width: 100%;
+        float: left;
+        text-align: center;
+        height: 300px;}
+    }    
+    
     .project9{
-                background-image: url({image:Project9});
+                background-color: {color:Project 9 Colour};
+                background-image: url('{image:Project 9 Image}');
                 background-size: cover;
                 width: 33%;
                 float: left;
                 text-align: center;
-                height: 200px;
+                height: 300px;
+                color: {color:Project Title};
+                position: relative;
             }
+
+    @media (max-width: 1000px) {
+    .project9 {
+        width: 50%;
+        float: left;
+        text-align: center;
+        height: 300px;}
+    }
+    
+@media (max-width: 480px) {
+    .project9 {
+        width: 100%;
+        float: left;
+        text-align: center;
+        height: 300px;}
+    }  
     .project10{
-                background-image: url({image:Project10});
+                background-color: {color:Project 10 Colour};
+                background-image: url('{image:Project 10 Image}');
                 background-size: cover; 
                 width: 33%;
                 float: left;
                 text-align: center;
-                height: 200px;
+                height: 300px;
+                color: {color:Project Title};
+                position: relative;
             }
+    
+@media (max-width: 1000px) {
+    .project10 {
+        width: 50%;
+        float: left;
+        text-align: center;
+        height: 300px;}
+    }
+    
+@media (max-width: 480px) {
+    .project10 {
+        width: 100%;
+        float: left;
+        text-align: center;
+        height: 300px;}
+    }    
     .project11{
-                background-image: url({image:Project11});
-                width: 33%;
+                background-color: {color:Project 11 Colour};
+                background-image: url('{image:Project 11 Image}');
+                width: 34%;
                 float: left;
                 text-align: center;
-                height: 200px;
+                height: 300px;
+                color: {color:Project Title};
+                position: relative;
             }
+    
+@media (max-width: 1000px) {
+    .project11 {
+        width: 50%;
+        float: left;
+        text-align: center;
+        height: 300px;}
+    }
+    
+@media (max-width: 480px) {
+    .project11 {
+        width: 100%;
+        float: left;
+        text-align: center;
+        height: 300px;}
+    }   
+    
     .project12{
-                background-image: url({image:Project12});
+                background-color: {color:Project 12 Colour};
+                background-image: url('{image:Project 12 Image}');
                 width: 33%;
                 float: left;
                 text-align: center;
+                height: 300px;
+                color: {color:Project Title};
+                position: relative;
             }
+    
+@media (max-width: 1000px) {
+    .project12 {
+        width: 50%;
+        float: left;
+        text-align: center;
+        height: 300px;}
+    }
+    
+@media (max-width: 480px) {
+    .project12 {
+        width: 100%;
+        float: left;
+        text-align: center;
+        height: 300px;}
+    }
+
+    .permalinkheader {   
+        height: 80px;
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
+        background-color: {color:Header Colour};
+        background-image: url('{image:Header Image}');
+    }
+    
+    /* Permalink Page ********************************/
+
+    
+    .permalinktitle { 
+        display: flex;
+        height: 10%;
+        padding: 0 0 0 10%;
+    }
+    
+    h3 {    font-size: 20px;
+            line-height: 40px;
+            font-family: {font:Title}; "Open Sans", sans serif;
+            font-weight: 400;
+            text-align: left;
+            text-decoration: none;
+            color: {color:Perma Title};
+            padding: 20px 0 20px 0;
+            margin: 0;
+            float: left;
+    }
+    
+    h3 a {  font-size: 20px;
+            line-height: 30px;
+            font-family: {font:Title}; "Open Sans", sans serif;
+            font-weight: 400;
+            text-align: left;
+            text-decoration: none;
+            color: {color:Perma Title};
+            padding: 20px 0 20px 0;
+            float: left;
+            margin: 0;
+ }
+    
+    h4 {    font-size: 60px;
+            line-height: 70px;
+            font-family: {font:ProjectTitle}; "Open Sans", sans serif;
+            font-weight: 400;
+            text-align: left;
+            padding: 0;
+            text-decoration: none;
+            color: {color:Perma Headline};
+            margin: 0;
+    }
+    
+@media (max-width: 1000px) {
+    h4 {    font-size: 50px;
+            line-height: 60px;
+            font-family: {font:ProjectTitle}; "Open Sans", sans serif;
+            font-weight: 400;
+            text-align: left;
+            padding: 0;
+            text-decoration: none;
+            color: {color:Perma Headline};
+            margin: 0;}
+    }  
+
+@media (max-width: 480px) {
+    h4 {    font-size: 40px;
+            line-height: 50px;
+            font-family: {font:ProjectTitle}; "Open Sans", sans serif;
+            font-weight: 400;
+            text-align: left;
+            padding: 0;
+            text-decoration: none;
+            color: {color:Perma Headline};
+            margin: 0;}  
+    }
+    
+    p {     font-size: 15px;
+            line-height: 20px;
+            font-family: {font:Copy}; "Open Sans", sans serif;
+            font-weight: 300;
+            text-align: left;
+            padding: 0;
+            text-decoration: none;
+            color: {color:Copy Text};
+
+    }    
+    .posttext{
+        height: auto;    
+        padding: 5% 10% 5% 10%;   
+        background-color: {color:Post Background};
+    }   
+    
+    
+
+    img{
+        width: 100%;
+        height: 100%;
+        padding: 15px 0;
+    }
+    
+    /* Projects Footer Permalink Page ********************************/
+
+    .permaproject1{
+                background-color: {color:Project 1 Colour};
+                background-image: url('{image:Project 1 Image}');
+                background-size: cover;
+                width: 25%;
+                float: left;
+                text-align: center;
+                height: 150px;
+                color: {color:Project Title};
+                position: relative;
+            }
+    
+@media (max-width: 1000px) {
+    .permaproject1 {
+        width: 33%;
+        float: left;
+        text-align: center;
+        height: 150px;}
+    }
+    
+@media (max-width: 480px) { 
+    .permaproject1 {
+        width: 50%;
+        float: left;
+        text-align: center;
+        height: 150px;}
+    }
+    
+    .permaproject2{
+                background-color: {color:Project 2 Colour};
+                background-image: url('{image:Project 2 Image}');
+                background-size: cover;
+                width: 25%;
+                float: left;
+                text-align: center;
+                height: 150px;
+                color: {color:Project Title};
+                position: relative;
+            }
+
+@media (max-width: 1000px) {
+    .permaproject2 {
+        width: 34%;
+        float: left;
+        text-align: center;
+        height: 150px;}
+    }
+    
+@media (max-width: 480px) {
+    .permaproject2 {
+        width: 50%;
+        float: left;
+        text-align: center;
+        height: 150px;}
+    }
+    
+    .permaproject3{
+                background-color: {color:Project 3 Colour};
+                background-image: url('{image:Project 3 Image}');
+                background-size: cover;
+                width: 25%;
+                float: left;
+                text-align: center;
+                height: 150px;
+                color: {color:Project Title};
+                position: relative;
+         }
+    
+@media (max-width: 1000px) {
+    .permaproject3 {
+        width: 33%;
+        float: left;
+        text-align: center;
+        height: 150px;}
+    }
+    
+@media (max-width: 480px) { 
+    .permaproject3 {
+        width: 50%;
+        float: left;
+        text-align: center;
+        height: 150px;}
+    }
+    
+    .permaproject4{
+                background-color: {color:Project 4 Colour};
+                background-image: url('{image:Project 4 Image}');
+                background-size: cover;
+                width: 25%;
+                float: left;
+                text-align: center;
+                height: 150px;
+                color: {color:Project Title};
+                position: relative;
+            }
+
+    @media (max-width: 1000px) {
+    .permaproject4 {
+        width: 33%;
+        float: left;
+        text-align: center;
+        height: 150px;}
+    }
+    
+@media (max-width: 480px) { 
+    .permaproject4 {
+        width: 50%;
+        float: left;
+        text-align: center;
+        height: 150px;}
+    }
+    
+    .permaproject5{
+                background-color: {color:Project 5 Colour};
+                background-image: url('{image:Project 5 Image}');
+                background-size: cover;
+                width: 25%;
+                float: left;
+                text-align: center;
+                height: 150px;
+                color: {color:Project Title};
+                position: relative;
+            }
+   
+@media (max-width: 1000px) {
+    .permaproject5 {
+        width: 34%;
+        float: left;
+        text-align: center;
+        height: 150px;}
+    }
+    
+@media (max-width: 480px) {
+    .permaproject5 {
+        width: 50%;
+        float: left;
+        text-align: center;
+        height: 150px;}
+    }
+    
+    .permaproject6{
+                background-color: {color:Project 6 Colour};
+                background-image: url('{image:Project 6 Image}');
+                background-size: cover;
+                width: 25%;
+                float: left;
+                text-align: center;
+                height: 150px;
+                color: {color:Project Title};
+                position: relative;
+            }
+
+@media (max-width: 1000px) {
+    .permaproject6 {
+        width: 33%;
+        float: left;
+        text-align: center;
+        height: 150px;}
+    }
+    
+@media (max-width: 480px) {
+    .permaproject6 {
+        width: 50%;
+        float: left;
+        text-align: center;
+        height: 150px;}
+    }
+    
+    .permaproject7{
+                background-color: {color:Project 7 Colour};
+                background-image: url('{image:Project 7 Image}');
+                background-size: cover;
+                width: 25%;
+                float: left;
+                text-align: center;
+                height: 150px;
+                color: {color:Project Title};
+                position: relative;
+            }
+    
+@media (max-width: 1000px) {
+    .permaproject7 {
+        width: 33%;
+        float: left;
+        text-align: center;
+        height: 150px;}
+    }
+    
+@media (max-width: 480px) {
+    .permaproject7 {
+        width: 50%;
+        float: left;
+        text-align: center;
+        height: 150px;}
+    }  
+    
+    .permaproject8{
+                background-color: {color:Project 8 Colour};
+                background-image: url('{image:Project 8 Image}');
+                background-size: cover;
+                width: 25%;
+                float: left;
+                text-align: center;
+                height: 150px;
+                color: {color:Project Title};
+                position: relative;
+            }
+    
+@media (max-width: 1000px) {
+    .permaproject8 {
+        width: 34%;
+        float: left;
+        text-align: center;
+        height: 150px;}
+    }
+    
+@media (max-width: 480px) {
+    .permaproject8 {
+        width: 50%;
+        float: left;
+        text-align: center;
+        height: 150px;}
+    }    
+    
+    .permaproject9{
+                background-color: {color:Project 9 Colour};
+                background-image: url('{image:Project 9 Image}');
+                background-size: cover;
+                width: 25%;
+                float: left;
+                text-align: center;
+                height: 150px;
+                color: {color:Project Title};
+                position: relative;
+            }
+
+@media (max-width: 1000px) {
+    .permaproject9 {
+        width: 33%;
+        float: left;
+        text-align: center;
+        height: 150px;}
+    }
+    
+@media (max-width: 480px) {
+    .permaproject9 {
+        width: 50%;
+        float: left;
+        text-align: center;
+        height: 150px;}
+    }  
+    .permaproject10{
+                background-color: {color:Project 10 Colour};
+                background-image: url('{image:Project 10 Image}');
+                background-size: cover; 
+                width: 25%;
+                float: left;
+                text-align: center;
+                height: 150px;
+                color: {color:Project Title};
+                position: relative;
+            }
+    
+@media (max-width: 1000px) {
+    .permaproject10 {
+        width: 33%;
+        float: left;
+        text-align: center;
+        height: 150px;}
+    }
+    
+@media (max-width: 480px) {
+    .permaproject10 {
+        width: 50%;
+        float: left;
+        text-align: center;
+        height: 150px;}
+    }    
+    .permaproject11{
+                background-color: {color:Project 11 Colour};
+                background-image: url('{image:Project 11 Image}');
+                width: 25%;
+                float: left;
+                text-align: center;
+                height: 150px;
+                color: {color:Project Title};
+                position: relative;
+            }
+    
+@media (max-width: 1000px) {
+    .permaproject11 {
+        width: 34%;
+        float: left;
+        text-align: center;
+        height: 150px;}
+    }
+    
+@media (max-width: 480px) {
+    .permaproject11 {
+        width: 50%;
+        float: left;
+        text-align: center;
+        height: 150px;}
+    }   
+    
+    .permaproject12{
+                background-color: {color:Project 12 Colour};
+                background-image: url('{image:Project 12 Image}');
+                width: 25%;
+                float: left;
+                text-align: center;
+                height: 150px;
+                color: {color:Project Title};
+                position: relative;
+            }
+    
+@media (max-width: 1000px) {
+    .permaproject12 {
+        width: 33%;
+        float: left;
+        text-align: center;
+        height: 150px;}
+    }
+    
+@media (max-width: 480px) {
+    .permaproject12 {
+        width: 50%;
+        float: left;
+        text-align: center;
+        height: 150px;}
+    }    
+
+#tumblr_controls {display:none;}
+
+body > iframe:first-child { display: none !important; }
+    
+</style>
+        
+</head>
+    
+<body>
+
+<!------------- Index Page ------------->
+    
+    <!------------- Header ------------->
+
+
+{block:IndexPage}
+    
+    <div class="header">
+    
+        <div class="title">
+
+            {block:IfShowLogo}
+            <a href="/"><div class="logo"><img src="{image:Logo}" alt="{BlogTitle}" width="150px" height="150px"></div></a>
+            {block:IfShowLogo}
+
+        
+            {block:IfShowTitle}<a href="/"><h1>{BlogTitle}</h1></a>{/block:IfShowTitle}
+
+            {block:IfShowDescription}<h2>{Description}</h2>{/block:IfShowDescription}
+
+        </div>
+        
+    <!------------- Links ------------->
+
+        <div class="links">
+            <ul>
+				{block:HasPages} 
+				  {block:Pages}
+				    <li><a href="{URL}">{Label}</a></li>
+				  {/block:Pages}
+				{/block:HasPages}
+
+			</ul>
+        </div>
+        
+    </div>
+    
+<!------------- Projects ------------->
+    
+    {block:IfShowProject1}
+    <a href="{text:Project 1 Link}"><div class="project1"><div class="pcopy">{text:Project 1 Name}</div></div></a>
+    {block:IfShowProject1}
+    {block:IfShowProject2}
+    <a href="{text:Project 2 Link}"><div class="project2"><div class="pcopy">{text:Project 2 Name}</div></div></a>
+    {/block:IfShowProject2}
+    {block:IfShowProject3}
+    <a href="{text:Project 3 Link}"><div class="project3"><div class="pcopy">{text:Project 3 Name}</div></div></a>
+    {/block:IfShowProject3}
+    {block:IfShowProject4}
+        <a href="{text:Project 4 Link}"><div class="project4"><div class="pcopy">{text:Project 4 Name}</div></div></a>
+    {/block:IfShowProject4}
+    {block:IfShowProject5}
+        <a href="{text:Project 5 Link}"><div class="project5"><div class="pcopy">{text:Project 5 Name}</div></div></a>
+    {/block:IfShowProject5}
+    {block:IfShowProject6}
+        <a href="{text:Project 6 Link}"><div class="project6"><div class="pcopy">{text:Project 6 Name}</div></div></a>
+    {/block:IfShowProject6}
+    {block:IfShowProject7}
+        <a href="{text:Project 7 Link}"><div class="project7"><div class="pcopy">{text:Project 7 Name}</div></div></a>
+    {/block:IfShowProject7}
+    {block:IfShowProject8}
+        <a href="{text:Project 8 Link}"><div class="project8"><div class="pcopy">{text:Project 8 Name}</div></div></a>
+    {/block:IfShowProject8}
+    {block:IfShowProject9}
+        <a href="{text:Project 9 Link}"><div class="project9"><div class="pcopy">{text:Project 9 Name}</div></div></a>
+    {/block:IfShowProject9}
+    {block:IfShowProject10}
+        <a href="{text:Project 10 Link}"><div class="project10"><div class="pcopy">{text:Project 10 Name}</div></div></a>
+    {/block:IfShowProject10}
+    {block:IfShowProject11}
+        <a href="{text:Project 11 Link}"><div class="project11"><div class="pcopy">{text:Project 11 Name}</div></div></a>
+    {/block:IfShowProject11}
+    {block:IfShowProject12}
+        <a href="{text:Project 12 Link}"><div class="project12"><div class="pcopy">{text:Project 12 Name}</div></div></a>
+    {/block:IfShowProject12}
+    
+{/block:IndexPage}
+
+<!------------- Project Page ------------->
+    
+    
+    <!------------- Header ------------->
+
+    {block:PermalinkPage}  
+    
+    
+     <div class="permalinkheader">
+    
+        <div class="permalinktitle">
+
+            {block:IfShowLogo}
+            <a href="/"><div class="permalogo"><img src="{image:Logo}" alt="{BlogTitle}" width="50px" height="50px"></div></a>
+            {block:IfShowLogo}
+
+            {block:IfShowTitle}<a href="/"><h3>{BlogTitle}</h3></a>{/block:IfShowTitle}
+
+        </div>
+    
+    </div>
+    
+   <!------------- Post ------------->
+ 
+    {block:Posts}
+            {block:Text}
+                <div class="posttext">
+                    <h4>{Title}</h4>
+                    <p>{Body}</p>
+                    </div>
+            {/block:Text}    
+    
+        {block:Photo}
+                <div class="posttext">
+                <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+                {block:Caption}<p>{Caption}</p>{/block:Caption}
+                </div>
+        {/block:Photo}
+    
+    {block:Panorama}
+        <div class="posttext">
+                {LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />{LinkCloseTag}
+
+            {block:Caption}
+            <p>{Caption}</p>
+            {/block:Caption}
+        </div>
+    {/block:Panorama}
+    
+    
+    {block:Photoset}
+        <div class="posttext">
+   {block:Caption}
+            {Caption}
+        {/block:Caption}
+            
+    {block:Photos}
+        <img src="{PhotoURL-500}"
+            width="{PhotoWidth-500}"height="{PhotoHeight-500}" />
+
+        {block:Caption}
+            {Caption}
+        {/block:Caption}
+
+    {/block:Photos}
+        </div>
+    {/block:Photoset}
+    
+            {block:Video}
+                <div class="posttext">
+                <img src="{Video-700}" alt="{PhotoAlt}"/>{LinkCloseTag}{block:HighRes}
+         <a href="{PhotoURL-HighRes}">View in High-Res</a>{/block:HighRes}
+                {block:Caption}<p>{Caption}</p>{/block:Caption}
+                </div>
+        {/block:Video}
+    
+    {/block:Posts} 
+    
+    <!------------- Links ------------->
+
+        <div class="permalinks">
+            <ul>
+				{block:HasPages} 
+				  {block:Pages}
+				    <li class="perma"><a href="{URL}">{Label}</a></li>
+				  {/block:Pages}
+				{/block:HasPages}
+
+			</ul>
+        </div>   
+    
+    <!------------- Projects Footer ------------->
+
+    {block:IfShowProjectsFooter}
+
+        {block:IfShowProject1}
+    <a href="{text:Project 1 Link}"><div class="permaproject1"><div class="permapcopy">{text:Project 1 Name}</div></div></a>
+    {block:IfShowProject1}
+    {block:IfShowProject2}
+    <a href="{text:Project 2 Link}"><div class="permaproject2"><div class="permapcopy">{text:Project 2 Name}</div></div></a>
+    {/block:IfShowProject2}
+    {block:IfShowProject3}
+    <a href="{text:Project 3 Link}"><div class="permaproject3"><div class="permapcopy">{text:Project 3 Name}</div></div></a>
+    {/block:IfShowProject3}
+    {block:IfShowProject4}
+    <a href="{text:Project 4 Link}"><div class="permaproject4"><div class="permapcopy">{text:Project 4 Name}</div></div></a>
+    {/block:IfShowProject4}
+    {block:IfShowProject5}
+    <a href="{text:Project 5 Link}"><div class="permaproject5"><div class="permapcopy">{text:Project 5 Name}</div></div></a>
+    {/block:IfShowProject5}
+    {block:IfShowProject6}
+    <a href="{text:Project 6 Link}"><div class="permaproject6"><div class="permapcopy">{text:Project 6 Name}</div></div></a>
+    {/block:IfShowProject6}
+    {block:IfShowProject7}
+    <a href="{text:Project 7 Link}"><div class="permaproject7"><div class="permapcopy">{text:Project 7 Name}</div></div></a>
+    {/block:IfShowProject7}
+    {block:IfShowProject8}
+    <a href="{text:Project 8 Link}"><div class="permaproject8"><div class="permapcopy">{text:Project 8 Name}</div></div></a>
+    {/block:IfShowProject8}
+    {block:IfShowProject9}
+    <a href="{text:Project 9 Link}"><div class="permaproject9"><div class="permapcopy">{text:Project 9 Name}</div></div></a>
+    {/block:IfShowProject9}
+    {block:IfShowProject10}
+    <a href="{text:Project 10 Link}"><div class="permaproject10"><div class="permapcopy">{text:Project 10 Name}</div></div></a>
+    {/block:IfShowProject10}
+    {block:IfShowProject11}
+    <a href="{text:Project 11 Link}"><div class="permaproject11"><div class="permapcopy">{text:Project 11 Name}</div></div></a>
+    {/block:IfShowProject11}
+    {block:IfShowProject12}
+    <a href="{text:Project 12 Link}"><div class="permaproject12"><div class="permapcopy">{text:Project 12 Name}</div></div></a>
+    {/block:IfShowProject12}
+    
+    {/block:IfShowProjectsFooter}
+
+    
+    {/block:PermalinkPage}
+    
+    
+    
+    </body>
+</html>
